@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battety Status App</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .box {
+            background-color: white;
+            width: 300px;
+            padding: 50px;
+            text-align: justify;
+            border: 12px solid black;
+            border-radius: 20px;
+        }
+
+        .box2 {
+            background-color: orange;
+            width: 0px;
+            padding: 0px;
+            text-align: justify;
+            border: 20px solid black;
+            margin-left: 350px;
+            height: 20px;
+            border-radius: 10px;
+        }
+        .center{
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+        .status{
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="center">
+            
+        <h1 class="status"> <span id="battery"></span>%
+             </h1>    
+        </div>
+        <div class="box">
+            <div class="box2">
+
+            </div>
+        </div>
+    </center>
+
+
+</body>
+<script>
+    async function getBattery() {
+        try {
+
+            const battery1 = await navigator.getBattery();
+            let batteryResult = battery1.level * 100;
+            document.getElementById("battery").innerText = batteryResult;
+
+        } catch (error) {
+            console.log("Something wrong!!!");
+        }
+    }
+    getBattery();
+</script>
+
+</html>

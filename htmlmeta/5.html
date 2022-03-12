@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Person{
+            color: blueviolet;
+        }
+        [data-age="45"]{
+            color: brown;
+        }
+        [data-age="45"]{
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Person" data-age="26" data-gender="Male" data-tech="Mern">
+        <h3>Rafik</h3>
+        <h5>Accountant</h5>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae expedita in ipsam consectetur, ad atque
+            dicta, autem corporis quaerat sequi labore vero, quas incidunt? Voluptatem repellendus esse nesciunt placeat
+            odio?
+        </p>
+    </div>
+    <div class="Person" data-age="45" data-gender="Male" data-tech="php">
+        <h3>Rafik</h3>
+        <h5>Accountant</h5>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae expedita in ipsam consectetur, ad atque
+            dicta, autem corporis quaerat sequi labore vero, quas incidunt? Voluptatem repellendus esse nesciunt placeat
+            odio?
+        </p>
+    </div>
+</body>
+<script>
+    var counter = 0;
+    function trigger() {
+      console.log(`I am Getting Fired at counter ${counter}`);
+      counter++;
+    }
+  </script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Fonts</title>
+    <style>
+        @font-face {
+            font-family: prashanth;
+            src: url(unsteadyfont.ttf);
+        }
+
+        #long {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        #short {
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            border: 5px solid black;
+            font-family: prashanth;
+        }
+    </style>
+    <script src="7.js"></script>  
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="data">Enter Your Data : </label>
+            <input id="formdata" placeholder="Enter Your Text ..." />
+            <button type="button" onclick="getFormData();">Submit Data</button>
+            <button type="button" onclick="clearData();" id="clear" hidden>Clear</button>
+        </form>
+        <p id="short"></p>
+    </div>
+</body>
+  
+</html>

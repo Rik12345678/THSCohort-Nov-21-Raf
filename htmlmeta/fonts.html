@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fonts</title>
+    <style>
+        @font-face {
+            font-family: Rafik;
+            src: url(unsteadyfont.ttf);
+        }
+
+        #long {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #short {
+            font-family: 'Rafik';
+            background-color: aqua;
+            width: "200px";
+            height: "100px";
+            border: 2px;
+        }
+
+        #maze1 {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            border: 5px solid red;
+        }
+
+        #maze2 {
+            width: 400px;
+            height: 200px;
+            background-color: blue;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <form>
+            <label for="data"> Enter Your Data: </label>
+            <input id="formdata" placeholder="Enter your Text..." />
+            <button type="button" onclick="getFormData();">Submit Data</button>
+            <button type="button" onclick="getFormData();">Clear</button>
+        </form>
+        <p id="short"></p>
+    </div>
+    
+</body>
+<script>
+    function getFormData(){
+       let value = document.getElementById("formdata").value.toUpperCase();
+       document.getElementById("short").innerText = value;
+    }
+</script>
+</html>
